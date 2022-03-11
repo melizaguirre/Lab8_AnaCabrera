@@ -102,6 +102,16 @@ public class Carrera extends javax.swing.JFrame {
         });
 
         btn_Color.setText("Color");
+        btn_Color.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btn_ColorMouseClicked(evt);
+            }
+        });
+        btn_Color.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ColorActionPerformed(evt);
+            }
+        });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "McQueen", "Convertible", "Nascar" }));
 
@@ -235,7 +245,19 @@ public class Carrera extends javax.swing.JFrame {
 
     private void btn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarActionPerformed
         // TODO add your handling code here:
+        String id = tb_numero.getText();
+        String nombre = tb_corredor.getText();
+        
     }//GEN-LAST:event_btn_agregarActionPerformed
+
+    private void btn_ColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ColorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_ColorActionPerformed
+
+    private void btn_ColorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ColorMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btn_ColorMouseClicked
 
     /**
      * @param args the command line arguments
