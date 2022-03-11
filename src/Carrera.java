@@ -1,3 +1,9 @@
+
+import java.awt.Color;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import javax.swing.JColorChooser;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,6 +15,7 @@
  * @author BAC
  */
 public class Carrera extends javax.swing.JFrame {
+    
 
     /**
      * Creates new form Carrera
@@ -16,7 +23,16 @@ public class Carrera extends javax.swing.JFrame {
     public Carrera() {
         initComponents();
     }
-
+    
+    public void agregarCorredor (String TipCarro, String nomCorredor, int Color)throws IOException {     
+     carros.seek(carros.length());   
+     
+     carros.writeInt(identificador);
+     carros.writeLong(0);
+     carros.writeUTF(nomCorredor);
+     carros.writeInt(Color);
+     carros.writeUTF(TipCarro);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -245,13 +261,15 @@ public class Carrera extends javax.swing.JFrame {
 
     private void btn_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_agregarActionPerformed
         // TODO add your handling code here:
-        String id = tb_numero.getText();
-        String nombre = tb_corredor.getText();
-        
+       
     }//GEN-LAST:event_btn_agregarActionPerformed
 
     private void btn_ColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ColorActionPerformed
         // TODO add your handling code here:
+        JColorChooser seleccionarColor = new JColorChooser();
+        color = seleccionarColor.showDialog(null, "Seleccione un color para el auto", Color.RED);
+        btn_Color.setBackground(color);
+        
     }//GEN-LAST:event_btn_ColorActionPerformed
 
     private void btn_ColorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ColorMouseClicked
