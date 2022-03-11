@@ -17,8 +17,19 @@ import java.io.RandomAccessFile;
 public class SistemaCorredores {
     static RandomAccessFile carros;
     
+    
     public SistemaCorredores() throws FileNotFoundException, IOException{
        File file = new File("Autos");
        file.mkdirs();
+       SistemaCorredores.carros = new RandomAccessFile("Autos/carros.amci", "rw");
+    }
+
+        
+    public void agregarCorredor (String TipCarro, String nomCorredor, int Color)throws IOException {     
+     carros.seek(carros.length());   
+     carros.writeLong(0);
+     carros.writeUTF(nomCorredor);
+     carros.writeInt(Color);
+     carros.writeUTF(TipCarro);
     }
 }

@@ -24,16 +24,7 @@ public class Carrera extends javax.swing.JFrame {
     public Carrera() {
         initComponents();
     }
-    
-    public void agregarCorredor (String TipCarro, String nomCorredor, int Color)throws IOException {     
-     carros.seek(carros.length());   
-     
-     carros.writeInt(identificador);
-     carros.writeLong(0);
-     carros.writeUTF(nomCorredor);
-     carros.writeInt(Color);
-     carros.writeUTF(TipCarro);
-    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
