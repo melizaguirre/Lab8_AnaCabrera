@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import javax.swing.JColorChooser;
+import javax.swing.table.DefaultTableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -270,6 +271,13 @@ public class Carrera extends javax.swing.JFrame {
         color = seleccionarColor.showDialog(null, "Seleccione un color para el auto", Color.RED);
         btn_Color.setBackground(color);
         
+        
+        DefaultTableModel modelo=(DefaultTableModel) jTable1.getModel(); 
+         Object [] fila=new Object[3]; 
+        fila[0]=tb_numero.getText(); 
+        fila[1]=tb_corredor.getText(); 
+        modelo.addRow(fila); 
+        jTable1.setModel(modelo); 
     }//GEN-LAST:event_btn_ColorActionPerformed
 
     private void btn_ColorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ColorMouseClicked

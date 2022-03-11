@@ -16,7 +16,6 @@ import java.io.RandomAccessFile;
  */
 public class SistemaCorredores {
     static RandomAccessFile carros;
-    static RandomAccessFile identificador;
     
     public SistemaCorredores() throws FileNotFoundException, IOException{
        File file = new File("Autos");
