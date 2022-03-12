@@ -12,7 +12,7 @@ import java.io.Serializable;
  *
  * @author BAC
  */
-public class Auto implements Serializable{
+public class Corredores implements Serializable{
     private int identificacion;
     private double distanciaRecorrida;
     private String nombreCorredor;
@@ -28,7 +28,7 @@ public class Auto implements Serializable{
         this.color = color;
     }
 
-    public Auto(int identificacion, double distanciaRecorrida, String nombreCorredor, Color color) {
+    public Corredores(int identificacion, double distanciaRecorrida, String nombreCorredor, Color color) {
         this.identificacion = identificacion;
         this.distanciaRecorrida = distanciaRecorrida;
         this.nombreCorredor = nombreCorredor;
